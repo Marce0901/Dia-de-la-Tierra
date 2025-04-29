@@ -25,9 +25,6 @@ if (contenedor) {
         const indice = Math.floor(Math.random() * datos.length);
         contenedor.textContent = datos[indice];
     }
-
-    // Llama a la función si es necesario automáticamente
-    dato();
 }
 
 function video() {
