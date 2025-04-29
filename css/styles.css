@@ -1,0 +1,279 @@
+/*Shirley Castillo*/
+/*Cod 133173*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-position: center;
+    background:
+        linear-gradient(rgba(215, 214, 214, 0.5), rgba(255, 255, 255, 0.5)),
+        /*Opacidad de la imagen*/
+        url("../img/IMG1.jpg");
+    /*Trae la ubicacion de la imagen del fondo*/
+}
+
+.logo {
+    width: 100px;
+    /* Ajusta el tamaño si es necesario */
+    left: 20px;
+    position: absolute;
+}
+
+.logo2 {
+    width: 100px;
+    /* Ajusta el tamaño si es necesario */
+    right: 20px;
+    position: absolute;
+}
+
+
+@media (min-width: 800px) {
+    header {
+        flex-wrap: nowrap;
+    }
+
+    header h1 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo,
+    .logo2 {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        padding: 1.5em 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario {
+        padding: 1em;
+        margin: 20px auto;
+    }
+}
+
+#gifs {
+    display: flex;
+    gap: 20px;
+    /* Espacio entre los gifs */
+    flex-wrap: wrap;
+    width: 100%;
+    /* Las imágenes se ajustan al ancho de su contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    justify-content: center;
+}
+
+#gifs img {
+    width: 400px;
+    /* Tamaño deseado de cada gif */
+    height: auto;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-shadow: 2px 5px #000;
+}
+
+h2 {
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+}
+
+nav {
+    background-color: #011b0d;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    padding: 20px;
+    background-color: transparent;
+    margin: 20px 150px;
+    border: solid #000;
+    text-align: auto;
+}
+
+
+footer {
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+th,
+td {
+    padding: 8px;
+    /* Reemplaza cellpadding="8" */
+    border: 1px solid #4c4c4c;
+    text-align: center;
+}
+
+thead {
+    background-color: #6cd96c;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d8d8d8;
+}
+
+.botones {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.botones button {
+    font-family: 'Times New Roman', Times, serif;
+    width: 400px;
+    height: auto;
+    padding: 0.75em 1.5em;
+    background-color: #072409;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.botones button:hover {
+    background-color: #2e7d32;
+}
+
+#dato-c {
+    margin-top: 1em;
+    padding: 1em;
+    text-align: center;
+    background-color: #83c693;
+    color: #000;
+    border-left: 4px solid #08680d;
+}
+
+.formulario {
+    display: grid;
+    gap: 16px;
+    justify-items: stretch;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 2em;
+    padding-right: 3em;
+    background: linear-gradient(to bottom right, #4CAF50, #001d07);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.formulario label {
+    font-size: 600;
+    color: #00310a;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+/*Diseño de los campos de texto*/
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #5da163;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #b3e6bcfc;
+    color: #003611;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/*Muestra el foco de donde se va a escribir*/
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #26a64f;
+    box-shadow: 0 0 8px rgba(38, 166, 87, 0.3);
+    outline: none;
+}
+
+/*Diseño del boton*/
+.formulario button {
+    background-color: #000000;
+    color: white;
+    padding: 0.75em;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*Efecto hover para el boton enviar*/
+.formulario button:hover {
+    background-color: #004d0f;
+}
+
+#cambio {
+    background-color: #004d0f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
